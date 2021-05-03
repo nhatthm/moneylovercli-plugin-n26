@@ -1,5 +1,3 @@
 plugins:
-  n26:
+  - name: n26
     visible: false
-    artifacts:
-      default: ${plugin}-${version}-${os}-${arch}.tar.gz
