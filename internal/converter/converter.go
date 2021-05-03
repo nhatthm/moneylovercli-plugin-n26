@@ -36,6 +36,8 @@ func Convert(ctx context.Context, r io.Reader, w io.Writer, opts ...Option) erro
 		select {
 		case err, ok := <-readErr:
 			if ok {
+				cancel()
+
 				return err
 			}
 
@@ -43,6 +45,8 @@ func Convert(ctx context.Context, r io.Reader, w io.Writer, opts ...Option) erro
 
 		case err, ok := <-writeErr:
 			if ok {
+				cancel()
+
 				return err
 			}
 

@@ -151,7 +151,7 @@ func TestConvert(t *testing.T) {
 		},
 		{
 			scenario:      "write error",
-			input:         strings.NewReader(`[{}]`),
+			input:         newDelayedReader(5*time.Millisecond, `[{},{},{},{}]`),
 			output:        newWriterHasError(errors.New(`write error`)),
 			expectedError: `could not write transaction: write error`,
 		},
