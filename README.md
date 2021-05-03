@@ -1,15 +1,13 @@
-# @nhatthm/{name}
+# N26 plugin for MoneyLover CLI
 
-<!--
-[![GitHub Releases](https://img.shields.io/github/v/release/nhatthm/{name})](https://github.com/nhatthm/{name}/releases/latest)
-[![Build Status](https://github.com/nhatthm/{name}/actions/workflows/test.yaml/badge.svg)](https://github.com/nhatthm/{name}/actions/workflows/test.yaml)
-[![codecov](https://codecov.io/gh/nhatthm/{name}/branch/master/graph/badge.svg?token=eTdAgDE2vR)](https://codecov.io/gh/nhatthm/{name})
-[![Go Report Card](https://goreportcard.com/badge/github.com/nhatthm/{name})](https://goreportcard.com/report/github.com/nhatthm/{name})
-[![GoDevDoc](https://img.shields.io/badge/dev-doc-00ADD8?logo=go)](https://pkg.go.dev/github.com/nhatthm/{name})
+[![GitHub Releases](https://img.shields.io/github/v/release/nhatthm/moneylovercli-plugin-n26)](https://github.com/nhatthm/moneylovercli-plugin-n26/releases/latest)
+[![Build Status](https://github.com/nhatthm/moneylovercli-plugin-n26/actions/workflows/test.yaml/badge.svg)](https://github.com/nhatthm/moneylovercli-plugin-n26/actions/workflows/test.yaml)
+[![codecov](https://codecov.io/gh/nhatthm/moneylovercli-plugin-n26/branch/master/graph/badge.svg?token=eTdAgDE2vR)](https://codecov.io/gh/nhatthm/moneylovercli-plugin-n26)
+[![Go Report Card](https://goreportcard.com/badge/github.com/nhatthm/moneylovercli-plugin-n26)](https://goreportcard.com/report/github.com/nhatthm/moneylovercli-plugin-n26)
+[![GoDevDoc](https://img.shields.io/badge/dev-doc-00ADD8?logo=go)](https://pkg.go.dev/github.com/nhatthm/moneylovercli-plugin-n26)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?hosted_button_id=PJZSGJN57TDJY)
--->
 
-TBD
+A plugin for [moneylovercli](https://github.com/nhatthm/moneylovercl) to convert n26 transactions and import to MoneyLover.
 
 ## Prerequisites
 
@@ -18,20 +16,27 @@ TBD
 ## Install
 
 ```bash
-go get github.com/nhatthm/{name}
+moneylovercli plugin install github.com/nhatthm/moneylovercli-plugin-n26
 ```
 
 ## Usage
 
-TBD
+If you have a list of n26 transactions, you can either pipe it or read it, like this
 
-## Examples
+```bash
+n26 transactions --from 2020-01-01 --to 2020-02-01 > transactions.json
+moneylovercli transactions import --provider n26 < transactions.json
+```
 
-TBA
+or
+
+```bash
+n26 transactions --from 2020-01-01 --to 2020-02-01 | moneylovercli transactions import --provider n26
+```
 
 ## Donation
 
-If this project help you reduce time to develop, you can give me a cup of coffee :)
+If you like this project, you can give me a cup of coffee :)
 
 ### Paypal donation
 
