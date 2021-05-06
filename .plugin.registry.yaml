@@ -1,2 +1,5 @@
 name: n26
+description: N26 transactions converter
 hidden: true
+tags:
+    - converter
