@@ -11,7 +11,7 @@ A plugin for [moneylovercli](https://github.com/nhatthm/moneylovercl) to convert
 
 ## Prerequisites
 
-- `Go >= 1.16`
+- `Go >= 1.17`
 
 ## Install
 
