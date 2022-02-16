@@ -3,7 +3,7 @@ module github.com/nhatthm/moneylovercli-plugin-n26
 go 1.17
 
 require (
-	github.com/bool64/ctxd v1.0.0
+	github.com/bool64/ctxd v1.1.0
 	github.com/nhatthm/moneyloverapi v0.1.1
 	github.com/nhatthm/n26api v0.4.0
 	github.com/spf13/cobra v1.3.0
@@ -12,7 +12,6 @@ require (
 )
 
 require (
-	github.com/bool64/dev v0.1.41 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect
