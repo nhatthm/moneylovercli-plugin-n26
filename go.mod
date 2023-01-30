@@ -3,7 +3,7 @@ module github.com/nhatthm/moneylovercli-plugin-n26
 go 1.17
 
 require (
-	github.com/bool64/ctxd v1.2.0
+	github.com/bool64/ctxd v1.2.1
 	github.com/nhatthm/moneyloverapi v0.1.1
 	github.com/nhatthm/n26api v0.4.0
 	github.com/spf13/cobra v1.6.1
