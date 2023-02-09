@@ -21,23 +21,25 @@ linters:
   enable-all: true
   disable:
     - exhaustivestruct
+    - exhaustruct
     - forbidigo
     - forcetypeassert
     - gci
     - gochecknoglobals
     - golint
     - gomnd
+    - gomoddirectives
     - ifshort
     - interfacer
     - ireturn
     - lll
     - maligned
+    - nonamedreturns
     - paralleltest
     - scopelint
-    - tagliatelle
     - testpackage
-    - wrapcheck
     - varnamelen
+    - wrapcheck
 
 issues:
   exclude-use-default: false
