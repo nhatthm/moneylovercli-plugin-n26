@@ -54,15 +54,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-go-${{ env.GO_VERSION }}-cache
 
-      - name: Test
-        run: |
-          make test
-
       - name: Build Artifact
         id: build_artifact
         env:
-          VERSION: ${{ steps.get_release.outputs.tag_name }}
+          VERSION: ${{ needs.get-release.outputs.tag_name }}
           BUILD_DIR: n26
+          BUILD_OS: ${{ matrix.os }}
+          BUILD_ARCH: ${{ matrix.arch }}
         run: |
           export VERSION=$(echo "$VERSION" | tr -d 'v')
 
@@ -86,7 +84,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.get_release.outputs.upload_url }}
+          upload_url: ${{ needs.get-release.outputs.upload_url }}
           asset_path: n26/n26-${{ env.BUILD_VERSION }}-${{ env.BUILD_OS }}-${{ env.BUILD_ARCH }}.tar.gz
           asset_name: n26-${{ env.BUILD_VERSION }}-${{ env.BUILD_OS }}-${{ env.BUILD_ARCH }}.tar.gz
           asset_content_type: application/gzip
