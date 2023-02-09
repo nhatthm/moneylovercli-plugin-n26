@@ -89,7 +89,7 @@ func read(ctx context.Context, dec *json.Decoder) (<-chan n26api.Transaction, <-
 	resCh := make(chan n26api.Transaction)
 	errCh := make(chan error, 1)
 
-	// nolint: errcheck
+	//nolint: errcheck
 	go func() (err error) {
 		defer close(resCh)
 		defer func() {
@@ -140,7 +140,7 @@ func read(ctx context.Context, dec *json.Decoder) (<-chan n26api.Transaction, <-
 func write(ctx context.Context, enc *json.Encoder, transactions <-chan n26api.Transaction) <-chan error {
 	errCh := make(chan error, 1)
 
-	// nolint: errcheck
+	//nolint: errcheck
 	go func() (err error) {
 		defer func() {
 			if err != nil {

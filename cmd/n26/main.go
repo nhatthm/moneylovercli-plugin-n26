@@ -1,3 +1,4 @@
+// Package main provides the main entry point for the n26 plugin.
 package main
 
 import (
