@@ -7,8 +7,10 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/nhatthm/moneylovercli-plugin-n26/internal/command"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+
+	"github.com/nhatthm/moneylovercli-plugin-n26/internal/command"
 )
 
 type buffer struct {
@@ -140,7 +142,7 @@ func TestNewConvert(t *testing.T) {
 			t.Log(result)
 
 			assert.Equal(t, tc.expected, result)
-			assert.NoError(t, err)
+			require.NoError(t, err)
 		})
 	}
 }

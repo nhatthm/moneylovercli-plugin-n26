@@ -6,8 +6,10 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/nhatthm/moneylovercli-plugin-n26/internal/command"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+
+	"github.com/nhatthm/moneylovercli-plugin-n26/internal/command"
 )
 
 func TestNewVersion(t *testing.T) {
@@ -20,7 +22,7 @@ func TestNewVersion(t *testing.T) {
 
 	err := cmd.Execute()
 
-	assert.NoError(t, err)
+	require.NoError(t, err)
 
 	expected := fmt.Sprintf("dev (rev: ; %s; %s/%s)\n", runtime.Version(), runtime.GOOS, runtime.GOARCH)
 

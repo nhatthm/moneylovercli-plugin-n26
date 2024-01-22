@@ -10,8 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nhatthm/moneylovercli-plugin-n26/internal/converter"
 	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
+
+	"github.com/nhatthm/moneylovercli-plugin-n26/internal/converter"
 )
 
 type delayedReader struct {
@@ -283,9 +285,9 @@ func TestConvert(t *testing.T) {
 			}
 
 			if tc.expectedError == "" {
-				assert.NoError(t, err)
+				require.NoError(t, err)
 			} else {
-				assert.EqualError(t, err, tc.expectedError)
+				require.EqualError(t, err, tc.expectedError)
 			}
 		})
 	}
