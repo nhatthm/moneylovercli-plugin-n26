@@ -6,8 +6,8 @@ require (
 	github.com/bool64/ctxd v1.2.1
 	github.com/nhatthm/moneyloverapi v0.3.0
 	github.com/nhatthm/n26api v0.5.0
-	github.com/spf13/cobra v1.8.1
-	github.com/spf13/pflag v1.0.5
+	github.com/spf13/cobra v1.9.1
+	github.com/spf13/pflag v1.0.6
 	github.com/stretchr/testify v1.9.0
 )
 
